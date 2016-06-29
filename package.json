@@ -1,0 +1,20 @@
+{
+  "name": "find-and-replace-same-type",
+  "main": "./lib/find-and-replace-same-type",
+  "version": "0.0.0",
+  "description": "Like project dir search of find-and-replace package but with automatic same file type pattern",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "find-and-replace-same-type:show"
+  },
+  "repository": "https://github.com/paradoxxxzero/atom-find-and-replace-same-type",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-utils": "^0.9.2",
+    "find-and-replace": "*"
+  }
+}

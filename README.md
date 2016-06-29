@@ -1,3 +1,15 @@
 # find-and-replace-same-type package
 
-Like project-dir search of find-and-replace package but with automatic same file type pattern
+Do a Project Dir search using the current file extension as pattern.
+
+## Pattern
+
+The pattern is customizable and is `*.{ext}` by default
+
+## Binding
+
+The default binding is `Ctrl-Shift-V`
+
+## License
+
+MIT - Copyright (c) 2016 Florian Mounier 

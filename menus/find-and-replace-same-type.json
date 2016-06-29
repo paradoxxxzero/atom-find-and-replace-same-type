@@ -1,0 +1,13 @@
+{
+  "menu": [
+    {
+      "label": "Find",
+      "submenu": [
+        {
+          "label": "Find In Project Same Type",
+          "command": "find-and-replace-same-type:show"
+        }
+      ]
+    }
+  ]
+}
