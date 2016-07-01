@@ -1,5 +1,6 @@
 {
   "atom-workspace": {
-    "ctrl-V": "find-and-replace-same-type:show"
+    "ctrl-V": "find-and-replace-same-type:show",
+    "ctrl-alt-v": "find-and-replace-same-dir:show"
   }
 }

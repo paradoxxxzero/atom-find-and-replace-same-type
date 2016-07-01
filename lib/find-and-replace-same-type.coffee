@@ -19,12 +19,13 @@ module.exports =
     # Register command that toggles this view
     @subscriptions.add(atom.commands.add 'atom-workspace',
       'find-and-replace-same-type:show': => @show()
+      'find-and-replace-same-dir:show': => @show(true)
     )
 
   deactivate: ->
     @subscriptions.dispose()
 
-  show: ->
+  show: (isDir=false) ->
     requirePackages('find-and-replace').then ([find]) ->
       return unless find
 
@@ -45,12 +46,20 @@ module.exports =
 
       paths = ''
       if filePath
-        pattern = atom.config.get(
-          'find-and-replace-same-type.patternExpression')
+        if isDir
+          paths = path.dirname(filePath)
+          for projectPath in atom.project.getPaths()
+            paths = paths
+              .replace(projectPath, '')
+              .replace(new RegExp('^' + path.sep), '')
+          paths = path.join(paths, '*')
+        else
+          pattern = atom.config.get(
+            'find-and-replace-same-type.patternExpression')
 
-        ext = path.extname(path.basename(filePath)).replace(/^\./, '')
-        if ext
-          paths = pattern.replace '{ext}', ext
+          ext = path.extname(path.basename(filePath)).replace(/^\./, '')
+          if ext
+            paths = pattern.replace '{ext}', ext
 
       view.pathsEditor.setText paths
 

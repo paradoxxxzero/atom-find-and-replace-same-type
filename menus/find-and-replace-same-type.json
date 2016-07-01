@@ -6,6 +6,10 @@
         {
           "label": "Find In Project Same Type",
           "command": "find-and-replace-same-type:show"
+        },
+        {
+          "label": "Find In Project Same Directory",
+          "command": "find-and-replace-same-dir:show"
         }
       ]
     }
