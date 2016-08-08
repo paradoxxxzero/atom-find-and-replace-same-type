@@ -5,7 +5,7 @@
   "description": "Like project dir search of find-and-replace package but with automatic same file type pattern",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "find-and-replace-same-dir:show"
+    "atom-workspace": ["find-and-replace-same-dir:show", "find-and-replace-same-type:show"]
   },
   "repository": "https://github.com/paradoxxxzero/atom-find-and-replace-same-type",
   "license": "MIT",
