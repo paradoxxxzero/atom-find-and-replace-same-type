@@ -1,7 +1,7 @@
 {
   "name": "find-and-replace-same-type",
   "main": "./lib/find-and-replace-same-type",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Like project dir search of find-and-replace package but with automatic same file type pattern",
   "keywords": [],
   "activationCommands": {
