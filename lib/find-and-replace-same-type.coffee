@@ -52,7 +52,7 @@ module.exports =
             paths = paths
               .replace(projectPath, '')
               .replace(new RegExp('^' + path.sep), '')
-          paths = path.join(paths, '*')
+          paths = path.join(paths, '**')
         else
           pattern = atom.config.get(
             'find-and-replace-same-type.patternExpression')
